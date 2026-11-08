@@ -1,0 +1,16 @@
+# LaTeX build output (Overleaf compiles on its own)
+build/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+main.pdf
+
+# local editor and OS files
+.vscode/
+.DS_Store
