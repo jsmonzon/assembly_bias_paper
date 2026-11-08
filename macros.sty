@@ -1,0 +1,211 @@
+\newcommand{\fvdb}[1]{{\color{BurntOrange}\textbf{[Frank: }\textbf{#1}]}}
+\newcommand{\jsm}[1]{{\color{TealBlue}\textbf{[Sebastian: }\textbf{#1}]}}
+\newcommand{\km}[1]{{\color{Green}\textbf{[Kaustav: }\textbf{#1}]}}
+
+\newcommand{\new}[1]{{\color{Rhodamine}\textbf{#1}}}
+\newcommand{\old}[1]{{\color{GreenYellow}\st{#1}}}
+
+\newcommand{\kpch}{\>{h^{-1}{\rm kpc}}}
+\newcommand{\mpch}{\>h^{-1}{\rm {Mpc}}}
+\newcommand{\yr}{\>{\rm yr}}
+\newcommand{\yrs}{\>{\rm yrs}}
+\newcommand{\Msunh}{\>h^{-1}\rm M_\odot}
+
+% specific to this paper
+\newcommand{\Mdm}{M_{\rm DM}}
+\newcommand{\Mvir}{M_{\rm vir}}
+\newcommand{\Rvir}{R_{\rm vir}}
+\newcommand{\mpart}{m_{\rm particle}}
+\newcommand{\mthresh}{m_{\rm thresh}}
+
+\newcommand{\Mcen}{M_{\rm cen}}
+\newcommand{\Msat}{M_{\rm sat}}
+\newcommand{\Mtot}{M_{\rm tot}}
+\newcommand{\Macc}{M_{\rm acc}}
+\newcommand{\Mex}{M_{\rm ex-situ}}
+\newcommand{\Min}{M_{\rm in-situ}}
+
+\newcommand{\zone}{z_{10}}
+\newcommand{\zfive}{z_{50}}
+\newcommand{\znine}{z_{90}}
+\newcommand{\spear}{\rho_{S}}
+\newcommand{\MMP}{M_{*}^{\rm MMP}}
+\newcommand{\MMPdm}{M_{\rm acc}^{\rm MMP}}
+
+\newcommand{\betadf}{\beta_{\rm DF}}
+\newcommand{\xmerge}{X_{\rm merge}}
+\newcommand{\fesc}{f_{\rm esc}}
+\newcommand{\fcann}{f_{\rm cann}}
+\newcommand{\reff}{r_{\rm eff}}
+\newcommand{\rmax}{r_{\rm max}}
+\newcommand{\vmax}{C_{\rm max}}
+
+\newcommand{\rs}{r_{\rm s}}
+\newcommand{\mstar}{m_{\rm *}}
+\newcommand{\macc}{m_{\rm acc}}
+\newcommand{\nsat}{n_{\rm sat}}
+\newcommand{\cvir}{c_{\rm vir}}
+\newcommand{\nsub}{N_{\rm sub}}
+\newcommand{\msub}{m_{\rm sub}}
+\newcommand{\fsub}{f_{\rm sub}}
+\newcommand{\msubm}{m_{\rm sub}^{\rm max}}
+\newcommand{\nsat}{N_{\rm sat}}
+
+
+\newcommand{\nsatmax}{n_{j}^{\rm max}}
+\newcommand{\Nhost}{N_{\rm host}}
+\newcommand{\Nsaga}{N_{\rm SAGA}}
+\newcommand{\Nmodel}{\hat{N}_{\rm host}}
+\newcommand{\htoh}{halo-to-halo }
+\newcommand{\dex}{\sigma_{\mathrm{M_{\ast}}}}
+\newcommand{\Mash}{M_{\rm ASH}}
+\newcommand{\sigmash}{\sigma_{M_{\rm ASH}}}
+\newcommand{\fmash}{f_{\rm ASH}}
+\newcommand{\Nnine}{N_{90}}
+
+% \newcommand{\bolshoi}{\textit{Bolshoi-Plank }}
+% \newcommand{\smdpl}{\textit{VSMDPL }}
+
+\newcommand{\SatGen}{{\tt SatGen}}
+\newcommand{\Rockstar}{{\tt ROCKSTAR$\,$}}
+\newcommand{\Subfind}{{\tt SUBFIND$\,$}}
+\newcommand{\SURV}{{\tt SURV$\,$}}
+\newcommand{\HBT}{{\tt HBT$\,$}}
+\newcommand{\treecode}{{\tt treecode$\,$}}
+\newcommand{\GPUtree}{{\tt OTOO$\,$}}
+\newcommand{\thetafid}{\btheta_{\rm fid}}
+
+\def\rma{{\rm a}}
+\def\rmb{{\rm b}}
+\def\rmc{{\rm c}}
+\def\rmd{{\rm d}}
+\def\rme{{\rm e}}
+\def\rmf{{\rm f}}
+\def\rmg{{\rm g}}
+\def\rmh{{\rm h}}
+\def\rmi{{\rm i}}
+\def\rmj{{\rm j}}
+\def\rmk{{\rm k}}
+\def\rml{{\rm l}}
+\def\rmm{{\rm m}}
+\def\rmn{{\rm n}}
+\def\rmo{{\rm o}}
+\def\rmp{{\rm p}}
+\def\rmq{{\rm q}}
+\def\rmr{{\rm r}}
+\def\rms{{\rm s}}
+\def\rmt{{\rm t}}
+\def\rmu{{\rm u}}
+\def\rmv{{\rm v}}
+\def\rmw{{\rm w}}
+\def\rmx{{\rm x}}
+\def\rmy{{\rm y}}
+\def\rmz{{\rm z}}
+
+\def\rmA{{\rm A}}
+\def\rmB{{\rm B}}
+\def\rmC{{\rm C}}
+\def\rmD{{\rm D}}
+\def\rmE{{\rm E}}
+\def\rmF{{\rm F}}
+\def\rmG{{\rm G}}
+\def\rmH{{\rm H}}
+\def\rmI{{\rm I}}
+\def\rmJ{{\rm J}}
+\def\rmK{{\rm K}}
+\def\rmL{{\rm L}}
+\def\rmM{{\rm M}}
+\def\rmN{{\rm N}}
+\def\rmO{{\rm O}}
+\def\rmP{{\rm P}}
+\def\rmQ{{\rm Q}}
+\def\rmR{{\rm R}}
+\def\rmS{{\rm S}}
+\def\rmT{{\rm T}}
+\def\rmU{{\rm U}}
+\def\rmV{{\rm V}}
+\def\rmW{{\rm W}}
+\def\rmX{{\rm X}}
+\def\rmY{{\rm Y}}
+\def\rmZ{{\rm Z}}
+
+\def\calA{{\cal A}}
+\def\calB{{\cal B}}
+\def\calC{{\cal C}}
+\def\calD{{\cal D}}
+\def\calE{{\cal E}}
+\def\calF{{\cal F}}
+\def\calG{{\cal G}}
+\def\calH{{\cal H}}
+\def\calI{{\cal I}}
+\def\calJ{{\cal J}}
+\def\calK{{\cal K}}
+\def\calL{{\cal L}}
+\def\calM{{\cal M}}
+\def\calN{{\cal N}}
+\def\calO{{\cal O}}
+\def\calP{{\cal P}}
+\def\calQ{{\cal Q}}
+\def\calR{{\cal R}}
+\def\calS{{\cal S}}
+\def\calT{{\cal T}}
+\def\calU{{\cal U}}
+\def\calV{{\cal V}}
+\def\calW{{\cal W}}
+\def\calX{{\cal X}}
+\def\calY{{\cal Y}}
+\def\calZ{{\cal Z}}
+
+\def\ba{{\bf a}}
+\def\bb{{\bf b}}
+\def\bc{{\bf c}}
+\def\bd{{\bf d}}
+\def\be{{\bf e}}
+\def\bff{{\bf f}}
+\def\bg{{\bf g}}
+\def\bh{{\bf h}}
+\def\bi{{\bf i}}
+\def\bj{{\bf j}}
+\def\bk{{\bf k}}
+\def\bl{{\bf l}}
+\def\bm{{\bf m}}
+\def\bn{{\bf n}}
+\def\bo{{\bf o}}
+\def\bp{{\bf p}}
+\def\bq{{\bf q}}
+\def\br{{\bf r}}
+\def\bs{{\bf s}}
+\def\bt{{\bf t}}
+\def\bu{{\bf u}}
+\def\bv{{\bf v}}
+\def\bw{{\bf w}}
+\def\bx{{\bf x}}
+\def\by{{\bf y}}
+\def\bz{{\bf z}}
+
+\def\bA{{\bf A}}
+\def\bB{{\bf B}}
+\def\bC{{\bf C}}
+\def\bD{{\bf D}}
+\def\bE{{\bf E}}
+\def\bF{{\bf F}}
+\def\bG{{\bf G}}
+\def\bH{{\bf H}}
+\def\bI{{\bf I}}
+\def\bJ{{\bf J}}
+\def\bK{{\bf K}}
+\def\bL{{\bf L}}
+\def\bM{{\bf M}}
+\def\bN{{\bf N}}
+\def\bO{{\bf O}}
+\def\bP{{\bf P}}
+\def\bQ{{\bf Q}}
+\def\bR{{\bf R}}
+\def\bS{{\bf S}}
+\def\bT{{\bf T}}
+\def\bU{{\bf U}}
+\def\bV{{\bf V}}
+\def\bW{{\bf W}}
+\def\bX{{\bf X}}
+\def\bY{{\bf Y}}
+\def\bZ{{\bf Z}}
