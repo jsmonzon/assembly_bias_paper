@@ -7,8 +7,8 @@ in under the same name.
 | file | made in (MassSpec) |
 |---|---|
 | Nhosts.pdf | notebooks/correlations/rho_mat_comp.ipynb |
-| scaling_relations.pdf | notebooks/correlations/rho_mat_comp.ipynb |
-| SHMF_all.pdf | notebooks/paper3/SHMF.ipynb |
+| scaling_relations.pdf | notebooks/paper3/scaling_offsets/scaling_relations_z50_cvir.ipynb (saved as figures/scaling_relations_z50_cvir.pdf) |
+| SHMF_all.pdf | notebooks/paper3/scaling_offsets/SHMF_diff.ipynb (saved as figures/SHMF_diff.pdf) |
 | corr_comp.pdf | notebooks/MW_mass/tara_data.ipynb or notebooks/scratch/arbitrary_cuts.ipynb (check) |
 | z50_cvir.pdf | notebooks/paper3/zhao_vs_vdb.ipynb |
 | z50_cvir_modified.pdf | notebooks/paper3/zhao_vs_vdb.ipynb |
