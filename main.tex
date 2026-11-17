@@ -139,20 +139,20 @@ The two summary statistics $\nsub$ and $\fsub$ are complementary in that $\nsub$
 \subsection{Measuring Halo Assembly Bias}
 \label{sec:correlation}
 
-The main goal of this study is to assess how $\nsub$ and $\fsub$ are correlated, at fixed halo mass, with secondary host halo properties. The secondary properties we focus on are halo formation redshift, $\zfive$, and host halo concentration, $\cvir$. These properties are known to be strongly correlated with each other because higher concentration halos form earlier \citep{Wechsler.etal.02} and the density profile of a halo is directly affected by its unique accretion history \citep{Lu.etal.06, Ludlow.etal.13, Lucie-Smith.etal.22}. 
+The main goal of this study is to assess how $\nsub$ and $\fsub$ are correlated, at fixed halo mass, with secondary host halo properties. The secondary properties we focus on are halo formation redshift, $\zfive$, and host halo concentration, $\cvir$. These properties are known to be strongly correlated with each other because higher-concentration halos form earlier \citep{Wechsler.etal.02} and the density profile of a halo is directly affected by its unique accretion history \citep{Lu.etal.06, Ludlow.etal.13, Lucie-Smith.etal.22}. 
 
-We quantify the assembly bias signal between $\nsub$/$\fsub$ and $\zfive$/$\cvir$ using four Spearman rank-order correlation coefficients: $\rho_S(\nsub | \zfive)$, $\rho_S(\fsub | \zfive)$, $\rho_S(\nsub | \cvir)$ and $\rho_S(\fsub | \cvir)$. All coefficients are measured within each $\mathbb{S}_m$ mass bin and hosts with $\nsub = 0$ are kept and share the lowest rank. Any deviation of these correlations from zero indicates that subhalo demographics depend on secondary halo properties and for the reasons outlined in Section~\ref{sec:intro}, we expect all four coefficients to be negative \citep{Zentner.etal.05, Jiang.vdBosch.17, Mao.etal.15}. 
+We quantify the assembly bias signal between $\nsub$/$\fsub$ and $\zfive$/$\cvir$ using four Spearman rank-order correlation coefficients: $\rho_S(\nsub | \zfive)$, $\rho_S(\fsub | \zfive)$, $\rho_S(\nsub | \cvir)$ and $\rho_S(\fsub | \cvir)$. All coefficients are measured within each $\mathbb{S}_m$ mass bin, and hosts with $\nsub = 0$ are kept and share the lowest rank. Any deviation of these correlations from zero indicates that subhalo demographics depend on secondary halo properties, and for the reasons outlined in Section~\ref{sec:intro}, we expect all four coefficients to be negative \citep{Zentner.etal.05, Jiang.vdBosch.17, Mao.etal.15}. 
 
-To account for the fact that $\zfive$ and $\cvir$ are themselves correlated, we also measure four other distinct \textit{partial} rank correlations. These partial correlations detail how much the measured correlation between two variables is a consequence of their common dependence on a third, related variable. For $X \in \{\nsub, \fsub\}$,
+To account for the fact that $\zfive$ and $\cvir$ are themselves correlated, we also measure four other distinct \textit{partial} rank correlations. These partial correlations detail how much the measured correlation between two variables is a consequence of their common dependence on a third, related variable. For $X \in \{\nsub, \fsub\}$, we define
 %
 \begin{equation}
-\rho_S(X, \zfive \,|\, \cvir) = \frac{\rho_S(X|\cvir) - \rho_S(X|\zfive)\,\rho_S(\zfive|\cvir)}{\sqrt{\left[1-\rho_S(X|\zfive)^2\right]\left[1-\rho_S(\zfive|\cvir)^2\right]}}\,.
+\rho_S(X, \cvir \,|\, \zfive) = \frac{\rho_S(X|\cvir) - \rho_S(X|\zfive)\,\rho_S(\zfive|\cvir)}{\sqrt{\left[1-\rho_S(X|\zfive)^2\right]\left[1-\rho_S(\zfive|\cvir)^2\right]}}\,,
 \label{eq:partial}
 \end{equation}
 %
-as the rank correlation between $X$ and $\cvir$ at fixed $\zfive$. If $X$ and $\cvir$ were related only through their common dependence on $\zfive$, their correlation would be the product $\rho_S(X|\zfive)\,\rho_S(\zfive|\cvir)$. The numerator therefore measures how much the measured $\rho_S(X|\cvir)$ departs from this expectation, and the denominator normalizes the result to $[-1, 1]$. A non-zero value thus indicates that $\cvir$ carries information about subhalo abundance beyond what $\zfive$ already provides. Since the fixed variable is held statistically rather than by sub-binning, the partial correlations use the full sample of hosts in each mass bin. Interchanging $\zfive$ and $\cvir$ gives $\rho_S(X, \cvir \,|\, \zfive)$, which measures how well $\zfive$ predicts $X$ at fixed $\cvir$. We refer to $\rho_S(X|\zfive)\,\rho_S(\zfive|\cvir)$ as the \textit{concentration channel} and $\rho_S(X, \cvir \,|\, \zfive)$ the \textit{formation-time channel}, respectively.
+as the rank correlation between $X$ and $\cvir$ at fixed $\zfive$. If $X$ and $\cvir$ were related only through their common dependence on $\zfive$, their correlation would be the product $\rho_S(X|\zfive)\,\rho_S(\zfive|\cvir)$. The numerator therefore measures how much the measured $\rho_S(X|\cvir)$ departs from this expectation, and the denominator normalizes the result to $[-1, 1]$. A non-zero value thus indicates that $\cvir$ carries information about subhalo abundance beyond what $\zfive$ already provides. Since the fixed variable is held statistically rather than by sub-binning, the partial correlations use the full sample of hosts in each mass bin. Interchanging $\zfive$ and $\cvir$ gives $\rho_S(X, \zfive \,|\, \cvir)$, which measures how well $\zfive$ predicts $X$ at fixed $\cvir$. We refer to $\rho_S(X, \cvir \,|\, \zfive)$ as the \textit{concentration channel} and $\rho_S(X, \zfive \,|\, \cvir)$ as the \textit{formation-time channel}.
 
-To quantify the statistical significance of these correlations coefficients, we estimate uncertainties on $\rho_S$ using a jackknife resampling procedure. For each host halo sample, we first compute the correlation coefficient using the full number of hosts per $\Mvir$ interval (see Figure \ref{fig:nhosts}). We then randomly partition each sample into $N_{\rm jk} = 10$ subsets and iteratively recompute $\rho_S$ while omitting one subset at a time. This produces distributions from which we estimate the variance using the standard jackknife estimator
+To quantify the statistical significance of these correlation coefficients, we estimate uncertainties on $\rho_S$ using a jackknife resampling procedure. For each host halo sample, we first compute the correlation coefficient using the full number of hosts per $\Mvir$ interval (see Figure~\ref{fig:nhosts}). We then randomly partition each sample into $N_{\rm jk} = 10$ subsets and iteratively recompute $\rho_S$ while omitting one subset at a time. This produces distributions from which we estimate the variance using the standard jackknife estimator
 %
 \begin{equation}
 \mathrm{Var}(\rho_S) = \frac{N_{\rm jk}-1}{N_{\rm jk}} \sum_{i=1}^{N_{\rm jk}} \left( \rho_i - \bar{\rho} \right)^2,
@@ -203,12 +203,12 @@ Overall, Figures \ref{fig:nhosts}, \ref{fig:scaling} and \ref{fig:SHMF} demonstr
 \subsection{Assembly Bias Signals}
 \label{sec:fid_HAB}
 
-\begin{figure*}
-    \centering
-     \includegraphics{figures/corr_comp.pdf}
-    \caption{Assembly bias signal as a function of host halo mass for SatGen (in blue), BolshoiP (in purple), and VSMDPL (in pink). All panels show rank order correlation coefficients measured with the error bars corresponding to the jackknife uncertainties described in Section \ref{sec:correlation}. We show $\rho_S(\nsub | \zfive)$ in panel A, $\rho_S(\fsub | \zfive)$ in panel B, $\rho_S(\nsub | \cvir)$ in panel C, and finally $\rho_S(\fsub | \cvir)$ in panel D. Finally, the mass-averaged correlation strengths are shown in the top left corner of every panel.}
-    \label{fig:correlations}
-\end{figure*}
+%\begin{figure*}
+%    \centering
+%     \includegraphics{figures/corr_comp.pdf}
+%    \caption{Assembly bias signal as a function of host halo mass for SatGen (in blue), BolshoiP (in purple), and VSMDPL (in pink). All panels show rank order correlation coefficients measured with the error bars corresponding to the jackknife uncertainties described in Section \ref{sec:correlation}. We show $\rho_S(\nsub | \zfive)$ in panel A, $\rho_S(\fsub | \zfive)$ in panel B, $\rho_S(\nsub | \cvir)$ in panel C, and finally $\rho_S(\fsub | \cvir)$ in panel D. Finally, the mass-averaged correlation strengths are shown in the top left corner of every panel.}
+%    \label{fig:correlations}
+%\end{figure*}
 
 We now move to comparing the measured assembly bias signals across all three models. Figure \ref{fig:correlations} shows $\rho_S(\nsub | \zfive)$ in panel A, $\rho_S(\fsub | \zfive)$ in panel B, $\rho_S(\nsub | \cvir)$ in panel C, and finally $\rho_S(\fsub | \cvir)$ in panel D all as a function of $\Mvir$. As before, the three different models are distinguished by color; SatGen in blue, BolshoiP in purple, and VSMDPL in pink. The error bars are the result of the jackknife analysis (see Section \ref{sec:correlation}) and the $\rho_S = 0$ line is shown for reference. Finally, to facilitate comparisons, the mass-averaged correlation strengths are printed in the top left of every panel.
 
@@ -221,12 +221,12 @@ It is also immediately clear that though the \SatGen\ model correctly predicts t
 \subsection{Relaxed Hosts}
 \label{sec:relaxed}
 
-\begin{figure*}
-    \centering
-     \includegraphics{figures/z50_cvir.pdf}
-    \caption{The 2D PDFs of $\zfive \times \cvir$ in the tree models. As before, the three models are distinguished by color as indicated by the legend and for clarity there were given different lifestyles. The top left corner of every panel indicates the mass sample plotted. The text in the bottom right corner shows the $\rho_S (\zfive | \cvir)$ correlation coefficient for all three models. Finally, the light shaded region depicts the $\cvir \approx 4$ limit in the \SatGen\ model. Notice that as we go from lower to higher host halo masses, the distributions shift slightly downward and the the left. While the \SatGen\ model is roughly  consistent with the simulations it fails to reproduce the $\rho_S (\zfive | \cvir)$ correlation strength in all mass samples.}
-    \label{fig:z50_cvir}
-\end{figure*}
+%\begin{figure*}
+%    \centering
+%     \includegraphics{figures/z50_cvir.pdf}
+%    \caption{The 2D PDFs of $\zfive \times \cvir$ in the tree models. As before, the three models are distinguished by color as indicated by the legend and for clarity there were given different lifestyles. The top left corner of every panel indicates the mass sample plotted. The text in the bottom right corner shows the $\rho_S (\zfive | \cvir)$ correlation coefficient for all three models. Finally, the light shaded region depicts the $\cvir \approx 4$ limit in the \SatGen\ model. Notice that as we go from lower to higher host halo masses, the distributions shift slightly downward and the the left. While the \SatGen\ model is roughly  consistent with the simulations it fails to reproduce the $\rho_S (\zfive | \cvir)$ correlation strength in all mass samples.}
+%    \label{fig:z50_cvir}
+%\end{figure*}
 
 As discussed in Section \ref{sec:satgen}, the fiducial \SatGen\ model ties the MAH of a host to its present day concentration according to the \cite{Zhao.etal.09} prescription. In this prescription, 
 %
@@ -243,12 +243,12 @@ Figure \ref{fig:z50_cvir} shows the 2D PDFs of the $\zfive \times \cvir$ distrib
 
 As can clearly be seen in Figure \ref{fig:z50_cvir}, though the overall correspondence in terms of the 1, 2 \& 3 $\sigma$ confidence intervals is good, the \cite{Zhao.etal.09} prescription not only fails to produce the extended tail, but also results in a weaker correlation between MAHs and present day halo concentrations. This is primarily due to the fact that, as described in Equation \ref{eq:zhao}, only the $t_{0.04}$ timescale is relevant for determining $\cvir$. Averaging across all host halo mass samples we find $< \rho_S > \approx -0.40$ in the \SatGen\ model, while $< \rho_S > \approx -0.60$ in the MultiDark suite. 
 
-\begin{figure*}
-    \centering
-     \includegraphics{figures/relaxed_corrcomp.pdf}
-    \caption{}
-    \label{fig:relaxed}
-\end{figure*}
+%\begin{figure*}
+%    \centering
+%     \includegraphics{figures/relaxed_corrcomp.pdf}
+%    \caption{}
+%    \label{fig:relaxed}
+%\end{figure*}
 
 In an attempt to improve the correspondence in Figure \ref{fig:z50_cvir} and to see how it impacts our measured HAB signals, we simply exclude those hosts in the simulations which are not dynamically relaxed. We do so by discarding halos with large spin values ($\lambda > 0.07$) or large center-of-mass offsets ($X_{\rm off} > 0.07$), both of which are indicative of non-equilibrium configurations (see Section 3 in \citealt{Klypin.etal.16} for details). Assuming these relaxation criteria and further requiring that all host halos are at least 3 virial radii away from a more massive neighbor, we reduced the total sample size by \jsm{XXX} for BolshoiP and VSMDPL, respectively. 
 
@@ -299,26 +299,26 @@ This separation is important because, in a cosmological simulation, these quanti
 
 Though the disparity at first might appear concerning, it is important to distinguish between the strength of a correlation and the ability to infer one quantity from another. Recently \cite{Monzon.etal.26} used random forest regression methods to demonstrate that a combination of present-day observables predicted by the \SatGen\ model can be used to infer metrics relevant to halo mass accretion histories. In short, they show that the combination of the stellar mass of the central galaxy ($M_{\rm cen}$), the accreted stellar halo ($M_{\rm ASH}$), and the cumulative mass of surviving satellites ($\Msat$) can be used to recover half-mass formation redshifts, the number of significant stellar-halo progenitors, and the accretion mass of the most massive progenitor. Lets assume that, in the context of $\Lambda$CDM, cosmological simulations are better suited than our semi-analytic framework for capturing the dynamic nature of structure formation. This implies that any signals of ``real'' HAB measured in observational data will be much stronger than what can be measured in our model (see Figure \ref{fig:correlations}). The results presented in \cite{Monzon.etal.26} are therefore even more encouraging because, despite its divided treatment of merger tree generation and subhalo evolution, the \SatGen\ model does produce useful connections between present-day satellite populations and halo assembly histories.
 
-\begin{figure}
-    \centering
-    \includegraphics{figures/concentrations.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics{figures/concentrations.pdf}
+%    \caption{Caption}
+%    \label{fig:placeholder}
+%\end{figure}
 
-\begin{figure*}
-    \centering
-    \includegraphics{figures/corner_alpha.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure*}
+%\begin{figure*}
+%    \centering
+%    \includegraphics{figures/corner_alpha.pdf}
+%    \caption{Caption}
+%    \label{fig:placeholder}
+%\end{figure*}
 
-\begin{figure*}
-    \centering
-    \includegraphics{figures/corner_beta.pdf}
-    \caption{Caption}
-    \label{fig:placeholder}
-\end{figure*}
+%\begin{figure*}
+%    \centering
+%    \includegraphics{figures/corner_beta.pdf}
+%    \caption{Caption}
+%    \label{fig:placeholder}
+%\end{figure*}
 
 \section{Summary and Conclusions}
 \label{sec:conclusions}
@@ -354,12 +354,12 @@ Across all four metrics, changing from $\mthresh = 7.75 \times 10^{9} \Msunh$ to
 
 In summary, though $\mthresh$ effectively sets $\nsub$, it is not itself a significant driver of the HAB signal. Again, because both the $\zfive$ and $\cvir$ distributions are set in the initial merger tree generation step, this experiment tests whether changing the minimum mass threshold at fixed assembly history can generate an additional HAB signal. We show that increasing the mass resolution of in the simulations by a factor of $\sim 20$ does not significantly alter the rank-order correlations between the surviving subhalo populations and either $\zfive$ or $\cvir$.
 
-\begin{figure*}
-    \centering
-     \includegraphics{figures/mass_thresfull.pdf}
-    \caption{The effect of varying the minimum mass threshold $\mthresh$ on the HAB signals. As before, the three models are distinguished by color as indicated by the legend. Just as in Figure \ref{fig:correlations}, we show $\rho_S(\nsub | \zfive)$ in panel A, $\rho_S(\fsub | \zfive)$ in panel B, $\rho_S(\nsub | \cvir)$ in panel C, and finally $\rho_S(\fsub | \cvir)$ in panel D. Here the different lifestyles correspond to the different values assumed for $\mthresh$ as indicated. For reference, the three thresholds shown correspond to 1000 (dotted), 500 (dashed) and 50 (solid) particles in BolshoiP. Once again, the jack-knife errorbars were not plotted but are qualitatively the same as before.}
-    \label{fig:massthresh}
-\end{figure*}
+%\begin{figure*}
+%    \centering
+%     \includegraphics{figures/mass_thresfull.pdf}
+%    \caption{The effect of varying the minimum mass threshold $\mthresh$ on the HAB signals. As before, the three models are distinguished by color as indicated by the legend. Just as in Figure \ref{fig:correlations}, we show $\rho_S(\nsub | \zfive)$ in panel A, $\rho_S(\fsub | \zfive)$ in panel B, $\rho_S(\nsub | \cvir)$ in panel C, and finally $\rho_S(\fsub | \cvir)$ in panel D. Here the different lifestyles correspond to the different values assumed for $\mthresh$ as indicated. For reference, the three thresholds shown correspond to 1000 (dotted), 500 (dashed) and 50 (solid) particles in BolshoiP. Once again, the jack-knife errorbars were not plotted but are qualitatively the same as before.}
+%    \label{fig:massthresh}
+%\end{figure*}
 
 \jsm{Discuss \cite{Nadler.etal.23b} and \cite{Zentner.07} who both use minimum mass thresholds relative to the host, \cite{Zentner.07} in particular shows what happens what happens to the correlation between z50 and Nsat when the threshold decreases but they do so in a narrow range where 0.1 < Vsat/Vhost < 0.5. In our highest mass range we range from have -4 < log(msat/Mhost) < -3 and in our lowest mass range we have -3 < log(msat/Mhost) < -2.}
 
