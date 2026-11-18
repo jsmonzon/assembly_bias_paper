@@ -219,19 +219,30 @@ It is also immediately clear that though the \SatGen\ model correctly predicts t
    \label{fig:partial}
 \end{figure*}
 
-\jsm{Because $\zfive$ and $\cvir$ are themselves correlated, Figure \ref{fig:correlations} alone does not tell us which of the two host properties carries the information about subhalo abundance. Figure \ref{fig:partial} therefore shows the partial correlations defined in Equation \ref{eq:partial}, using the same samples, mass bins and jackknife uncertainties as Figure \ref{fig:correlations}. The top row shows the concentration channel, $\rho_S(\nsub, \cvir \,|\, \zfive)$ and $\rho_S(\fsub, \cvir \,|\, \zfive)$, which measures how strongly $\cvir$ predicts subhalo abundance at fixed formation time. The bottom row shows the formation-time channel, $\rho_S(\nsub, \zfive \,|\, \cvir)$ and $\rho_S(\fsub, \zfive \,|\, \cvir)$, which measures the same for $\zfive$ at fixed concentration.}
+Because $\zfive$ and $\cvir$ are themselves correlated, Figure \ref{fig:correlations} alone does not tell us which of the two host properties carries the information about subhalo abundance. \jsm{this makes it sound like we think that all of the information should be in one or the other...} Figure \ref{fig:partial} therefore shows the partial correlations defined in Equation \ref{eq:partial}, using the same samples, mass bins and jackknife uncertainties as Figure \ref{fig:correlations}. The top row shows the concentration channel, $\rho_S(\nsub, \cvir \,|\, \zfive)$ and $\rho_S(\fsub, \cvir \,|\, \zfive)$, which measures how strongly $\cvir$ predicts subhalo abundance at fixed formation time. The bottom row shows the formation-time channel, $\rho_S(\nsub, \zfive \,|\, \cvir)$ and $\rho_S(\fsub, \zfive \,|\, \cvir)$, which measure how strongly $\zfive$ predicts subhalo abundance at fixed host halo concentration.
 
-\jsm{The two channels tell very different stories. In the formation-time channel, \SatGen\ agrees with the simulations to within $\Delta \langle \rho_S \rangle \lesssim 0.06$, with mass-averaged values of $-0.11$ for $\nsub$ and $-0.30$ for $\fsub$, compared to $-0.15$ to $-0.17$ and $-0.32$ to $-0.35$ in the MultiDark suite. In the concentration channel, however, both simulations retain a strong signal of $\langle \rho_S \rangle \approx -0.37$ for $\nsub$ and $\fsub$ alike, while \SatGen\ gives only $-0.16$ and $-0.11$. In other words, at fixed formation time, $\cvir$ carries substantial information about subhalo abundance in the simulations but very little in \SatGen. Together with the weaker correlation between $\zfive$ and $\cvir$ in \SatGen\ ($\rho_S \approx 0.39$ compared to $\approx 0.61$, see Section \ref{sec:relaxed}), this missing concentration channel accounts for the weaker assembly bias signals in Figure \ref{fig:correlations}. We discuss possible origins of this difference in Section \ref{sec:discussion}.}
+The two channels tell very different stories. In the formation-time channel, \SatGen\ agrees with the simulations to within $\Delta \langle \rho_S \rangle \lesssim 0.06$ across all mass bins. \jsm{what does this tell us? give me a sentence here} In the concentration channel, however, both simulations retain a strong signal of $\langle \rho_S \rangle \approx -0.37$ for $\nsub$ and $\fsub$ alike, while \SatGen\ gives $\langle \rho_S \rangle > -0.20$ \jsm{lets keep it to a single number to make it easier to read}. In other words, at fixed formation time, $\cvir$ carries substantial information about subhalo abundance in the MultiDark suite but very little in \SatGen. 
+
+\jsm{now we should discuss the concentrations without giving the technical details of the zhao prescription (we will save this for later when we discuss zhao vs ludlow and so on)}
+
+Figure \ref{fig:z50_cvir} shows the 2D PDFs of the $\zfive \times \cvir$ distributions. As before, the colors distinguish the different models and each panel shows a specific halo mass sample as denoted in the upper left corner. The light shaded region depicts the $\cvir \approx 4$ limit in the \SatGen\ model while the text in the lower right corner gives the rank-order correlation coefficient between half-mass formation redshift and present-day concentration $\rho_S (\zfive | \cvir)$. Though not a signal of HAB, this correlation (along with the extent of the $\zfive$ and $\cvir$ distributions) is also an important metric on which compare the models.
+
+As can clearly be seen in Figure \ref{fig:z50_cvir}, though the overall correspondence in terms of the 1, 2 \& 3 $\sigma$ confidence intervals is good, the \cite{Zhao.etal.09} prescription not only fails to produce the extended tail, but also results in a weaker correlation between MAHs and present day halo concentrations. This is primarily due to the fact that, as described in Equation \ref{eq:zhao}, only the $t_{0.04}$ timescale is relevant for determining $\cvir$. Averaging across all host halo mass samples we find $< \rho_S > \approx -0.40$ in the \SatGen\ model, while $< \rho_S > \approx -0.60$ in the MultiDark suite. 
+
+\begin{figure*}
+   \centering
+    \includegraphics{figures/z50_cvir.pdf}
+   \caption{The 2D PDFs of $\zfive \times \cvir$ in the tree models. As before, the three models are distinguished by color as indicated by the legend and for clarity there were given different lifestyles. The top left corner of every panel indicates the mass sample plotted. The text in the bottom right corner shows the $\rho_S (\zfive | \cvir)$ correlation coefficient for all three models. Finally, the light shaded region depicts the $\cvir \approx 4$ limit in the \SatGen\ model. Notice that as we go from lower to higher host halo masses, the distributions shift slightly downward and the the left. While the \SatGen\ model is roughly  consistent with the simulations it fails to reproduce the $\rho_S (\zfive | \cvir)$ correlation strength in all mass samples.}
+   \label{fig:z50_cvir}
+\end{figure*}
+
+Together with the weaker correlation between $\zfive$ and $\cvir$ in \SatGen\ ($\rho_S \approx 0.39$ compared to $\approx 0.61$, see Section \ref{sec:relaxed}), this missing concentration channel accounts for the weaker assembly bias signals in Figure \ref{fig:correlations}. We discuss possible origins of this difference in Section \ref{sec:discussion}.
+
+\section{Discussion}
+\label{sec:discussion}
 
 \subsection{Relaxed Hosts}
 \label{sec:relaxed}
-
-%\begin{figure*}
-%    \centering
-%     \includegraphics{figures/z50_cvir.pdf}
-%    \caption{The 2D PDFs of $\zfive \times \cvir$ in the tree models. As before, the three models are distinguished by color as indicated by the legend and for clarity there were given different lifestyles. The top left corner of every panel indicates the mass sample plotted. The text in the bottom right corner shows the $\rho_S (\zfive | \cvir)$ correlation coefficient for all three models. Finally, the light shaded region depicts the $\cvir \approx 4$ limit in the \SatGen\ model. Notice that as we go from lower to higher host halo masses, the distributions shift slightly downward and the the left. While the \SatGen\ model is roughly  consistent with the simulations it fails to reproduce the $\rho_S (\zfive | \cvir)$ correlation strength in all mass samples.}
-%    \label{fig:z50_cvir}
-%\end{figure*}
 
 As discussed in Section \ref{sec:satgen}, the fiducial \SatGen\ model ties the MAH of a host to its present day concentration according to the \cite{Zhao.etal.09} prescription. In this prescription, 
 %
@@ -244,9 +255,6 @@ Here, $t_{0.04}$ is the time at which the main progenitor reached 4\% of its pre
 
 The \cite{Zhao.etal.09} model therefore provides a deterministic relationship between MAHs and present-day halo concentrations. As discussed in \cite{vdBosch.etal.14}, this prescription produces less scatter in $\cvir$ for fixed a host halo mass compared to DMO simulations. In particular, simulations show an extended tail towards lower concentrations which is due to halos that are temporarily out of virial equilibrium because of recent merger activity. Such halos rarely have NFW-like density profiles owing to the fact that they are not dynamically ``relaxed''. It is therefore difficult to accurately measure $\cvir$ for these systems \citep{Neto.etal.07, Ludlow.etal.13,Ludlow.etal.16,Klypin.etal.16}.
 
-Figure \ref{fig:z50_cvir} shows the 2D PDFs of the $\zfive \times \cvir$ distributions. As before, the colors distinguish the different models and each panel shows a specific halo mass sample as denoted in the upper left corner. The light shaded region depicts the $\cvir \approx 4$ limit in the \SatGen\ model while the text in the lower right corner gives the rank-order correlation coefficient between half-mass formation redshift and present-day concentration $\rho_S (\zfive | \cvir)$. Though not a signal of HAB, this correlation (along with the extent of the $\zfive$ and $\cvir$ distributions) is also an important metric on which compare the models.
-
-As can clearly be seen in Figure \ref{fig:z50_cvir}, though the overall correspondence in terms of the 1, 2 \& 3 $\sigma$ confidence intervals is good, the \cite{Zhao.etal.09} prescription not only fails to produce the extended tail, but also results in a weaker correlation between MAHs and present day halo concentrations. This is primarily due to the fact that, as described in Equation \ref{eq:zhao}, only the $t_{0.04}$ timescale is relevant for determining $\cvir$. Averaging across all host halo mass samples we find $< \rho_S > \approx -0.40$ in the \SatGen\ model, while $< \rho_S > \approx -0.60$ in the MultiDark suite. 
 
 %\begin{figure*}
 %    \centering
