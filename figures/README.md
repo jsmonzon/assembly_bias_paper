@@ -18,4 +18,5 @@ in under the same name.
 | corner_beta.pdf | notebooks/paper3/bolshoi_rep.ipynb |
 | DF_full.pdf | notebooks/paper3/dynamical_friction.ipynb |
 | mass_thresfull.pdf | notebooks/correlations/mthresh.ipynb |
+| partial_corr.pdf | notebooks/paper3/partial_correlations.ipynb |
 | zf_correlation_vs_mass.pdf | notebooks/paper3/zx_rho_massbins.ipynb |

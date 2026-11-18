@@ -212,7 +212,16 @@ It is immediately clear that all three models produce assembly bias signals that
 
 It is also immediately clear that though the \SatGen\ model correctly predicts the sign of all correlations coefficients, it produces assembly bias signals that are weaker compared to the MultiDark suite. This is clearly not a numerical artifact in the simulations since the BolshoiP and VSMDPL produce HAB signals that are remarkably similar despite differences in mass resolution. The discrepancy between the \SatGen\ model and the simulations is most prominent when the assembly bias signal is measured with respect to $\cvir$ but across all four statistics, we find a $\Delta \rho_S \approx 0.28$. 
 
-\jsm{now we add the partial correlation coefficient plots!!}
+\begin{figure*}
+   \centering
+   \includegraphics{figures/partial_corr.pdf}
+   \caption{\jsm{Partial rank-order correlations (Equation \ref{eq:partial}) as a function of host halo mass for \SatGen\ (blue), BolshoiP (purple) and VSMDPL (pink). The top row shows the concentration channel, the correlation of $\nsub$ (panel A) and $\fsub$ (panel B) with $\cvir$ at fixed $\zfive$. The bottom row shows the formation-time channel, the correlation of $\nsub$ (panel C) and $\fsub$ (panel D) with $\zfive$ at fixed $\cvir$. Error bars are jackknife uncertainties and the mass-averaged values are given in the top left of each panel. \SatGen\ closely matches the simulations in the formation-time channel but produces a much weaker concentration channel.}}
+   \label{fig:partial}
+\end{figure*}
+
+\jsm{Because $\zfive$ and $\cvir$ are themselves correlated, Figure \ref{fig:correlations} alone does not tell us which of the two host properties carries the information about subhalo abundance. Figure \ref{fig:partial} therefore shows the partial correlations defined in Equation \ref{eq:partial}, using the same samples, mass bins and jackknife uncertainties as Figure \ref{fig:correlations}. The top row shows the concentration channel, $\rho_S(\nsub, \cvir \,|\, \zfive)$ and $\rho_S(\fsub, \cvir \,|\, \zfive)$, which measures how strongly $\cvir$ predicts subhalo abundance at fixed formation time. The bottom row shows the formation-time channel, $\rho_S(\nsub, \zfive \,|\, \cvir)$ and $\rho_S(\fsub, \zfive \,|\, \cvir)$, which measures the same for $\zfive$ at fixed concentration.}
+
+\jsm{The two channels tell very different stories. In the formation-time channel, \SatGen\ agrees with the simulations to within $\Delta \langle \rho_S \rangle \lesssim 0.06$, with mass-averaged values of $-0.11$ for $\nsub$ and $-0.30$ for $\fsub$, compared to $-0.15$ to $-0.17$ and $-0.32$ to $-0.35$ in the MultiDark suite. In the concentration channel, however, both simulations retain a strong signal of $\langle \rho_S \rangle \approx -0.37$ for $\nsub$ and $\fsub$ alike, while \SatGen\ gives only $-0.16$ and $-0.11$. In other words, at fixed formation time, $\cvir$ carries substantial information about subhalo abundance in the simulations but very little in \SatGen. Together with the weaker correlation between $\zfive$ and $\cvir$ in \SatGen\ ($\rho_S \approx 0.39$ compared to $\approx 0.61$, see Section \ref{sec:relaxed}), this missing concentration channel accounts for the weaker assembly bias signals in Figure \ref{fig:correlations}. We discuss possible origins of this difference in Section \ref{sec:discussion}.}
 
 \subsection{Relaxed Hosts}
 \label{sec:relaxed}
