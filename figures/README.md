@@ -10,7 +10,7 @@ in under the same name.
 | scaling_relations.pdf | notebooks/paper3/scaling_offsets/scaling_relations_z50_cvir.ipynb (saved as figures/scaling_relations_z50_cvir.pdf) |
 | SHMF_all.pdf | notebooks/paper3/scaling_offsets/SHMF_diff.ipynb (saved as figures/SHMF_diff.pdf) |
 | corr_comp.pdf | notebooks/MW_mass/tara_data.ipynb or notebooks/scratch/arbitrary_cuts.ipynb (check) |
-| z50_cvir.pdf | notebooks/paper3/zhao_vs_vdb.ipynb |
+| z50_cvir.pdf | notebooks/paper3/z50_cvir_kde.ipynb |
 | z50_cvir_modified.pdf | notebooks/paper3/zhao_vs_vdb.ipynb |
 | relaxed_corrcomp.pdf | notebooks/correlations/regimes.ipynb |
 | concentrations.pdf | unknown |
